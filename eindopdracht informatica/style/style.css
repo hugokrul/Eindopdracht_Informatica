@@ -7,9 +7,9 @@ body, html {
 }
 
 /* making the scrollbar go away */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 
 /* styling the images of gerard way */
 .gerardhesistantalien img {
