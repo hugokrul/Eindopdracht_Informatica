@@ -38,6 +38,7 @@ function login(form) {
 /* */
 
 function signup() {
+    // Inloggen met gebruikersnaam en wachtwoord
     usernameSignup = document.getElementById("userNameSignup").value;
     passwordSignup = document.getElementById("passwordSignup").value;
 
