@@ -1,38 +1,20 @@
-body,
-html {
+/* setting things for the whole page */
+body, html {
   background-color: aquamarine;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
+/* making the scrollbar go away */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* the Background */
-.background {
-  position: relative;
-  display: grid;
-  top: 6px;
-  left: 0px;
-  margin: auto;
-  width: 717px;
-  height: 463px;
-}
-
-.background-me {
-  position: relative;
-  display: block;
-  top: 0px;
-  left: 0px;
-  margin: auto;
-  width: auto;
-  height: auto;
-}
-
+/* styling the images of gerard way */
 .gerardhesistantalien img {
-  position: relative;
+  position: absolute;
+  top: 650px;
   height: 500px;
   left: 0px;
   width: 50%;
@@ -53,7 +35,7 @@ html {
 }
 
 
-
+/* styling the images of frank iero */
 .frankguitar img {
   position: absolute;
   top: 1150px;
@@ -68,6 +50,7 @@ html {
 }
 
 
+/* styling the images of mikey way */
 .mikeywaybass img {
   position: absolute;
   top: 2050px;
@@ -90,6 +73,7 @@ html {
   color: white;
 }
 
+/* styling the images of ray toro */
 .raytoro-cute img {
   position: absolute;
   top: 2550px;
@@ -133,6 +117,37 @@ ul.navigator {
   width: 100%;
 }
 
+
+/* for the links in Important Sites */
+.links li {
+  position: absolute;
+}
+
+.sites2 {
+  top: 180px;
+}
+
+.sites3 {
+  top: 235px;
+}
+
+.sites4 {
+  top: 290px;
+}
+
+.sites5 {
+  top: 345px;
+}
+
+.sites6 {
+  top: 400px;
+}
+
+.sites7 {
+  top: 455px;
+}
+
+/* styling the lists */
 li {
   float: left;
 }
@@ -156,7 +171,7 @@ li a:hover:not(.active) {
   opacity: 0.5;
 }
 
-/* login function */
+/* login and sign in function username */
 input[type="text"],
 select {
   width: 100%;
@@ -168,6 +183,7 @@ select {
   box-sizing: border-box;
 }
 
+/* login and sign in function password */
 input[type="password"],
 select {
   width: 100%;
@@ -179,6 +195,7 @@ select {
   box-sizing: border-box;
 }
 
+/* the button for the login and sign up pages */
 input[type="button"] {
   width: 100%;
   background-color: #4caf50;
@@ -189,10 +206,13 @@ input[type="button"] {
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* hovering above the button */
 input[type="button"]:hover {
   background-color: rgb(78, 190, 82);
 }
 
+/* hovering above the text input */
 input[type="text"]:hover {
   width: 100%;
   padding: 12px 20px;
@@ -203,6 +223,7 @@ input[type="text"]:hover {
   box-sizing: border-box;
 }
 
+/* hovering above the password input */
 input[type="password"]:hover {
   width: 100%;
   padding: 12px 20px;
@@ -213,13 +234,16 @@ input[type="password"]:hover {
   box-sizing: border-box;
 }
 
+/* het login block */
 div.login {
   position: relative;
+  min-height: 0vh;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 30px;
 }
 
+/* het sign up block */
 div.sign-up {
   position: relative;
   border-radius: 5px;
@@ -236,6 +260,7 @@ ul.scroll-down {
   position: relative;
 }
 
+/* for the lists */
 li {
   float: left;
 }
@@ -259,9 +284,10 @@ li a:hover:not(.active) {
   opacity: 0.5;
 }
 
+/* for the image were the text is */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("me.jpg");
-  min-height: 650px;
+  min-height: 100vh;
   padding: 0;
 
   background-attachment: fixed;
@@ -270,6 +296,7 @@ li a:hover:not(.active) {
   background-size: cover;
 }
 
+/* for the text inside the image */
 .hero-text {
   top: 50px;
   font-size: 25px;
@@ -282,6 +309,31 @@ li a:hover:not(.active) {
   color: white;
 }
 
+/* make the login text sticky */
+.hero-text-login {
+  top: 50px;
+  font-size: 25px;
+  position: fixed;
+
+  right: 50vh;
+  left: 50vh;
+  text-align: center;
+  color: white;
+}
+
+/* make the sign-up text sticky */
+.hero-text-sign_up {
+  top: 50px;
+  font-size: 25px;
+  position: fixed;
+
+  right: 50vh;
+  left: 50vh;
+  text-align: center;
+  color: white;
+}
+
+/* the same for the contact with things changed */
 .hero-image-contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("me.jpg");
   min-height: 100vh;
@@ -292,7 +344,8 @@ li a:hover:not(.active) {
   background-size: cover;
 }
 
-.hero-image-blog {
+/* the same for the important sites with things changed */
+.hero-image-site {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("me.jpg");
   min-height: 100vh;
 
@@ -302,18 +355,18 @@ li a:hover:not(.active) {
   background-size: cover;
 }
 
-
-
+/* if you hover above the link */
 a:hover {
   opacity: 0.7;
 }
 
+/* the link */
 a {
   color: white;
   text-decoration: none;
 }
 
-
+/* the horizontal line */
 hr {
   height: 2px;
   background: white

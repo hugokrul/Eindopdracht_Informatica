@@ -5,35 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/style/style.css" rel="stylesheet" type="text/css" />
-    <title>Document</title>
+    <title>Login</title>
 </head>
     <body>
-        <ul class="navigator">
-            <li><a href="./index_home.html">Home</a></li>
-            <li><a href="./index_importantSites.html">Important Sites</a></li>
-            <li><a href="./index_contact.html">Contact</a></li>
-            <li><a class="active" href="./index_login.html">Login</a></li>
-            <li><a href="./index_sign-up.html">Sign up</a></li>
-        </ul>
+        <nav>
+            <ul class="navigator">
+                <li><a href="./index_home.html">Home</a></li>
+                <li><a href="./index_importantSites.html">Important Sites</a></li>
+                <li><a href="./index_contact.html">Contact</a></li>
+                <li><a class="active" href="./index_login.html">Login</a></li>
+                <li><a href="./index_sign-up.html">Sign up</a></li>
+            </ul>
+        </nav>
 
+        
         <div class="hero-image">
-            <div class="hero-text">
-                <h1 style="font-size:50px">LOGIN</h1 class="hero-text-h1">
-                <p></p>
-            </div>
+            <header>
+                <div class="hero-text-login">
+                    <h1 style="font-size:50px">LOGIN</h1 class="hero-text-h1">
+                    <p></p>
+                </div>
+            </header>
         </div>
         
+        <!-- creating a login class -->
         <div class="login">
+            <!-- making a form without autocomplete -->
             <form autocomplete="off">
+                <!-- label and input for username -->
                 <label for="userName">Username</label>
                 <input type="text" name="userName" placeholder="Your username.." id="userName"/>
 
+                <!-- label and input for password -->
                 <label for="password">Password</label>
                 <input type="password" name="password" placeholder="Your password.." id="password"/>
-            
+                
+                <!-- a button with a the function login -->
                 <input type="button" onclick="login(this.form)" value="Login"/>
             </form>
         </div>
+
+        <!-- refering for a script -->
         <script src="\js\script.js"></script>
     </body>
 </html>
