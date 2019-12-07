@@ -13,7 +13,8 @@ body, html {
 
 /* styling the images of gerard way */
 .gerardhesistantalien img {
-  position: relative;
+  position: absolute;
+  top: 650px;
   height: 500px;
   left: 0px;
   width: 50%;
