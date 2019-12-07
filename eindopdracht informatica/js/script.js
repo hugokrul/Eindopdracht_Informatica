@@ -5,22 +5,13 @@ var usernameLogin, passwordLogin, usernameSignup, passwordSignup, userTrue, pass
 
 user = localStorage.getItem("username");
 
-
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-    } else {
-        document.getElementById("navbar").style.top = "-50px";
-    }
-    prevScrollpos = currentScrollPos;
-}
-
+// making the login function
 function login(form) {
+    // checking the userName input value
     usernameLogin = document.getElementById("userName").value;
     passwordLogin = document.getElementById("password").value;
 
+    // checking in local storage for the "username" item
     userTrue = localStorage.getItem("username");
     passTrue = localStorage.getItem("password");
 
@@ -38,23 +29,26 @@ function login(form) {
 /* */
 
 function signup() {
+    // checking the userNameSignup input value
     usernameSignup = document.getElementById("userNameSignup").value;
     passwordSignup = document.getElementById("passwordSignup").value;
 
-    encryptedPass = window.btoa(passwordSignup);
-    nonEncryptedPass = window.atob(encryptedPass)
-
+    // making a localStorage item
     userTrue = localStorage.getItem("username");
     passTrue = localStorage.getItem("password");
     
+    // checking if the username AND the password is already in taken
     if (usernameSignup === userTrue && passwordSignup === passTrue) {
-        alert("This username is already taken, please choose a new one.")
-    } else if (usernameSignup === userTrue) {
-        alert("This username already exists please get a new one.")
+        alert("This username is already taken, please choose a new one.") // displays error message
+    } else if (usernameSignup === userTrue) { // checking if the username is already in use
+        alert("This username already exists please get a new one.") // displays error message
     } else {
+        // setting the localstorage username to the username from the input
         localStorage.setItem("username", usernameSignup);
+        // setting the localstorage password to the password from the input
         localStorage.setItem("password", passwordSignup);
     }
 
+    // reload the page if everythings okay
     location.reload();
 }

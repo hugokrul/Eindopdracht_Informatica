@@ -8,46 +8,63 @@
     <title>Document</title>
 </head>
     <body>
-        <ul class="navigator">
-            <li><a href="./index_home.html">Home</a></li>
-            <li><a href="./index_importantSites.html">Important Sites</a></li>
-            <li><a href="./index_contact.html">Contact</a></li>
-            <li><a href="./index_login.html">Login</a></li>
-            <li><a class="active" href="./index_sign-up.html">Sign up</a></li>
-        </ul>
+        <!-- styling in css: nav -->
+        <nav>
+            <!-- making a non-numbered list for the navigationbar -->
+            <ul class="navigator">
+                <!-- making list items -->
+                <li><a href="./index_home.html">Home</a></li>
+                <li><a href="./index_importantSites.html">Important Sites</a></li>
+                <li><a href="./index_contact.html">Contact</a></li>
+                <li><a href="./index_login.html">Login</a></li>
+                <li><a class="active" href="./index_sign-up.html">Sign up</a></li>
+            </ul>
+        </nav>
+        
 
+        <!-- the picture and the text on a header -->
         <div class="hero-image">
-            <div class="hero-text">
-                <h1 style="font-size:50px">SIGN IN</h1 class="hero-text-h1">
-                <p></p>
-            </div>
+            <header>
+                <!-- the text in the image -->
+                <div class="hero-text">
+                    <h1 style="font-size:50px">SIGN IN</h1 class="hero-text-h1">
+                </div>
+            </header>
         </div>
 
+        <!-- the sign up form -->
         <div class="sign-up">
+            <!-- creating a form without autocomplete -->
             <form autocomplete="off">
+                <!-- label and input for the username -->
                 <label for="userNameSignup">Enter your username</label>
                 <input type="text" name="userNameSignup" placeholder="Your name.." id="userNameSignup"/>
 
+                <!-- label and input for the password -->
                 <label for="passwordSignup">Enter your password</label>
                 <input type="password" name="passwordSignup" placeholder="Your password.." id="passwordSignup"/>
 
+
+                <!-- label and input for the email adress -->
                 <label for="email">Enter your email adress</label>
                 <input type="text" name="email" placeholder="Example: user@company.com" id="email"/>
 
+                <!-- label and input for the phonenumber -->
                 <label for="phoneNumber">Enter your phonenumber</label>
                 <input type="text" name="phoneNumber" placeholder="Optional phonenumber" id="phoneNumber"/>
 
-                <label for="orderNumber">Enter your ordernumber</label>
-                <input type="text" name="orderNumber" placeholder="Optional ordernumber" id="orderNumber"/>
-
+                <!-- label and input for the gender -->
                 <label for="gender">Gender</label><br/>
                 <input type="radio" name="gender" value="male" id="male"> Male
                 <input type="radio" name="gender" value="female" id="female"> Female
                 <input type="radio" name="gender" value="other" id="other"> Other
 
+                <!-- refering to a function in script.js -->
                 <input type="button" onclick="signup()" value="Sign up"/>
             </form>
         </div>
+        
+        <!-- making the link for the script -->
         <script src="\js\script.js"></script>
     </body>
 </html>
