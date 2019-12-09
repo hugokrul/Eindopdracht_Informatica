@@ -32,17 +32,23 @@ function signup() {
     // checking the userNameSignup input value
     usernameSignup = document.getElementById("userNameSignup").value;
     passwordSignup = document.getElementById("passwordSignup").value;
+    emailSignup = document.getElementById("email").value;
 
     // making a localStorage item
     userTrue = localStorage.getItem("username");
     passTrue = localStorage.getItem("password");
+    email = localStorage.getItem("emailLocal");
     
     // checking if the username AND the password is already in taken
     if (usernameSignup === userTrue && passwordSignup === passTrue) {
         alert("This username is already taken, please choose a new one.") // displays error message
     } else if (usernameSignup === userTrue) { // checking if the username is already in use
         alert("This username already exists please get a new one.") // displays error message
+    } else if (emailSignup === email) {
+        alert("This email is already in use, please check it.")
     } else {
+        // setting the localstorage email to the email from the input
+        localStorage.setItem("email", emailSignup);
         // setting the localstorage username to the username from the input
         localStorage.setItem("username", usernameSignup);
         // setting the localstorage password to the password from the input
