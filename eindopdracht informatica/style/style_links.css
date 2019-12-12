@@ -43,6 +43,8 @@ ul.scroll-down {
   /* for the lists */
 .scroll-down li {
     float: left;
+    padding: 10px;
+    font-size: 27px;
 }  
 .scroll-down li a {
     display: block;
