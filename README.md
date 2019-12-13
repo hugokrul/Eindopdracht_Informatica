@@ -9,4 +9,4 @@ Om de repository te clonen.
 -
 -
 -
-zie de pdf voor de wireframes
+Zie de pdf voor de wireframes.
