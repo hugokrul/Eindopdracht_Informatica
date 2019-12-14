@@ -230,6 +230,7 @@ div.sign-up {
   font-size: 25px;
   position: absolute;
 
+  width: auto;
   left: 50vh;
   right: 50vh;
   text-align: center;
