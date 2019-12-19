@@ -1,6 +1,3 @@
-// ajax checken
-
-
 var usernameLogin, passwordLogin, usernameSignup, passwordSignup, userTrue, passTrue, user, pass, encryptedPass, nonEncryptedPass;
 
 user = localStorage.getItem("username");
@@ -74,4 +71,35 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
+}
+
+function gerard(event) {
+    alert("gerard");
+    return false;
+}
+
+function frank(event) {
+    alert("frank");
+    return false;
+}
+
+function mikey(event) {
+    alert("mikey");
+    return false;
+}
+
+function ray(event) {
+    alert("ray");
+    return false;
+}
+
+function setUpActions() {
+    var aLinkGerard=document.getElementById("actionLink_gerard");
+    var aLinkFrank=document.getElementById("actionLink_frank");
+    var aLinkMikey=document.getElementById("actionLink_mikey");
+    var aLinkRay=document.getElementById("actionLink_ray");
+    aLinkFrank.onclick=frank;
+    aLinkGerard.onclick=gerard;
+    aLinkMikey.onclick=mikey;
+    aLinkRay.onclick=ray;
 }

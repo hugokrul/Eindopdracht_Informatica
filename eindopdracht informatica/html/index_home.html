@@ -6,9 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="../style/style.css" rel="stylesheet" type="text/css" />
     <link href="../style/style_links.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function gerard(event) {
+            scrollBy(0, 610)
+            return false;
+        }
+
+        function frank(event) {
+            scrollBy(0, 1110)
+            return false;
+        }
+
+        function mikey(event) {
+            scrollBy(0, 2010)
+            return false;
+        }
+
+        function ray(event) {
+            scrollBy(0, 3010)
+            return false;
+        }
+
+        function setUpActions() {
+            var aLinkGerard=document.getElementById("actionLink_gerard");
+            var aLinkFrank=document.getElementById("actionLink_frank");
+            var aLinkMikey=document.getElementById("actionLink_mikey");
+            var aLinkRay=document.getElementById("actionLink_ray");
+            aLinkFrank.onclick=frank;
+            aLinkGerard.onclick=gerard;
+            aLinkMikey.onclick=mikey;
+            aLinkRay.onclick=ray;
+        }
+    </script>
     <title>Home</title>
 </head>
-    <body>
+    <body onload="setUpActions();">
         <!-- styling in css: nav -->
         <nav>
             <!-- making a non-numbered list for the navigationbar -->
@@ -39,10 +71,10 @@
                     <div class="scroll-down">
                         <ul class="scroll-down">
                             <!-- list items -->
-                            <li><a href="#gerard_Way" class="navigator">Gerard Way</a></li>
-                            <li><a href="#frank_Iero" class="navigator">Frank Iero</a></li>
-                            <li><a href="#mikey_Way" class="navigator">Mikey Way</a></li>
-                            <li><a href="#ray_Toro" class="navigator">Ray Toro</a></li>
+                            <li><a href="#" class="navigator" id="actionLink_gerard">Gerard Way</a></li>
+                            <li><a href="#" class="navigator" id="actionLink_frank">Frank Iero</a></li>
+                            <li><a href="#" class="navigator" id="actionLink_mikey">Mikey Way</a></li>
+                            <li><a href="#" class="navigator" id="actionLink_ray">Ray Toro</a></li>
                         </ul>
                     </div>
                 </div>
