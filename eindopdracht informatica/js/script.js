@@ -36,24 +36,39 @@ function signup() {
     passTrue = localStorage.getItem("password");
     email = localStorage.getItem("emailLocal");
     
-    // checking if the username AND the password is already in taken
-    if (usernameSignup === userTrue && passwordSignup === passTrue) {
-        alert("This username is already taken, please choose a new one.") // displays error message
-    } else if (usernameSignup === userTrue) { // checking if the username is already in use
-        alert("This username already exists please get a new one.") // displays error message
-    } else if (emailSignup === email) {
-        alert("This email is already in use, please check it.")
-    } else {
-        // setting the localstorage email to the email from the input
-        localStorage.setItem("email", emailSignup);
-        // setting the localstorage username to the username from the input
-        localStorage.setItem("username", usernameSignup);
-        // setting the localstorage password to the password from the input
-        localStorage.setItem("password", passwordSignup);
-    }
+    localStorage.setItem("password", passwordSignup);
+
+
+    checkSignup()
+    checkUsername()
+    checkEmail()
+    // message dat het gelukt is
+    alert("Succes!!")
 
     // reload the page if everythings okay
     location.reload();
+}
+
+function checkSignup() {
+    if (usernameSignup === userTrue && passwordSignup === passTrue) {
+        alert("Your already signed up.") // displays error message
+    }
+}
+
+function checkUsername() {
+    if (usernameSignup === userTrue) { // checking if the username is already in use
+        alert("This username already exists please get a new one.") // displays error message
+    }
+
+    localStorage.setItem("username", usernameSignup);
+}
+
+function checkEmail() {
+    if (emailSignup === email) {
+        alert("This email is already in use, please check it.")
+    }
+
+    localStorage.setItem("email", emailSignup);
 }
 
 function myFunction() {
@@ -71,35 +86,4 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
-}
-
-function gerard(event) {
-    alert("gerard");
-    return false;
-}
-
-function frank(event) {
-    alert("frank");
-    return false;
-}
-
-function mikey(event) {
-    alert("mikey");
-    return false;
-}
-
-function ray(event) {
-    alert("ray");
-    return false;
-}
-
-function setUpActions() {
-    var aLinkGerard=document.getElementById("actionLink_gerard");
-    var aLinkFrank=document.getElementById("actionLink_frank");
-    var aLinkMikey=document.getElementById("actionLink_mikey");
-    var aLinkRay=document.getElementById("actionLink_ray");
-    aLinkFrank.onclick=frank;
-    aLinkGerard.onclick=gerard;
-    aLinkMikey.onclick=mikey;
-    aLinkRay.onclick=ray;
 }
