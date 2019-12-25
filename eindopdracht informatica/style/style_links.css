@@ -47,7 +47,6 @@ ul.scroll-down {
     font-size: 27px;
 }  
 .scroll-down li a {
-    cursor: default;
     display: block;
     color: #000;
     padding: 14px 16px;
